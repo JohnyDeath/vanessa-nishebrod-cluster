@@ -1,5 +1,11 @@
 #!/bin/bash
 
+sudo curl -sSL https://get.docker.com/ | sh;
+
+sudo apt-get install zfs-fuse -y -q
+
+docker version
+
 echo "Installing compose"
 
 curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose

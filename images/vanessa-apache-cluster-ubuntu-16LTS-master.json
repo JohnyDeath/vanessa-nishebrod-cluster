@@ -13,15 +13,8 @@
   "provisioners": [{
     "type": "shell",
     "inline": [
-      "sleep 30",
-      "sudo curl -sSL https://get.docker.com/ | sh;",
-      "sudo apt-get install zfs-fuse -y -q ",
-      "docker version"
+      "sleep 30"
     ]
-  },
-  {
-    "type": "shell",
-    "script": "./images/prepare.sh"
   },
   {
     "type": "file",
@@ -35,7 +28,7 @@
   },
   {
     "type": "shell",
-    "script": "./images/build.sh"
+    "script": "./images/make-onec.sh"
   }
   ],
   "post-processors": [{

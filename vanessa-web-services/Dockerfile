@@ -16,8 +16,6 @@ RUN ls -al /distr
 
 RUN /distr/installapache.sh
 
-RUN sh /distr/download.sh
-
 RUN dpkg -i /distr/distr/1c*.deb \
     && rm -rf /distr/distr/*.deb \
     && apt-get clean && apt-get autoclean \
