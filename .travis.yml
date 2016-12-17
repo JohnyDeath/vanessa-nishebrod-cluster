@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.2
+install:
+  - curl -L -o packer.zip https://releases.hashicorp.com/packer/0.12.0/packer_0.12.0_linux_amd64.zip && unzip -d bin packer.zip && rm packer.zip
+script:
+  - PATH=$(pwd)/bin:$PATH packer validate -var 'do_api_token='$DO_TOKEN'' -var 'atlas_token='$ATLAS_TOKEN'' pg-ubuntu-96-onec-master.json
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then PATH=$(pwd)/bin:$PATH packer build -var 'do_api_token='$DO_TOKEN'' -var 'atlas_token='$ATLAS_TOKEN'' ./images/vaneesa-apache-cluster-ubuntu-16LTS-master.json; fi
+
+branches:
+  only:
+  - master
+  - develop

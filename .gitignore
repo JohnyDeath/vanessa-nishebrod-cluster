@@ -1,0 +1,9 @@
+# Compiled files
+*.tfstate
+*.tfstate.backup
+
+
+# Dev Env Files
+.env
+.sonarlint
+.vscode
