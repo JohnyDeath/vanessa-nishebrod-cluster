@@ -1,6 +1,7 @@
 # Кластер 1С для "нищебродов"
 
 [![Join the chat at https://gitter.im/silverbulleters/vanessa-base-init](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/silverbulleters/vanessa-nishebrod-cluster?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![Build Status](https://travis-ci.org/silverbulleters-research/vanessa-nishebrod-cluster.svg?branch=master)](https://travis-ci.org/silverbulleters-research/vanessa-nishebrod-cluster)
 
 * Если у вас нет сервера 1С или денег на сервер 1С.
 * А обеспечить высокую доступность хочется то этот репозиторий для вас
@@ -48,6 +49,7 @@
 ## Доработка
 
 * используйте GitHub-Flow и подавайте `pull-request'ы`
+* проверки качества - после согласования вашей доработки мы еще используем CI-CD [![Build Status](https://travis-ci.org/silverbulleters-research/vanessa-nishebrod-cluster.svg?branch=master)](https://travis-ci.org/silverbulleters-research/vanessa-nishebrod-cluster)
 
 ## Лицезия на проект
 
