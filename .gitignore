@@ -5,6 +5,7 @@
 
 # Dev Env Files
 .env
+images/.env
 .sonarlint
 .vscode
 

@@ -10,7 +10,11 @@ ENV REPODATA=/opt/repo
 ENV DESCRIPTORS=/opt/descriptors
 
 ADD conf /distr/
-RUN chmod -v +x /distr/docker-entrypoint.sh && chmod -v +x /distr/installapache.sh && sleep 1 && /distr/installapache.sh
+RUN chmod -v +x /distr/docker-entrypoint.sh && chmod -v +x /distr/installapache.sh 
+
+RUN ls -al /distr
+
+RUN /distr/installapache.sh
 
 RUN sh /distr/download.sh
 

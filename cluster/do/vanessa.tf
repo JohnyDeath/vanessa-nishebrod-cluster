@@ -2,6 +2,12 @@ provider "digitalocean" {
   token = "${var.do_token}"
 }
 
+data "atlas_artifact" "web" {
+    name = "silverbulleters/vanessa-apache-cluster-ub16LTSmaster-do"
+    type = "amazon.image"
+    build = "latest"
+}
+
 resource "digitalocean_droplet" "vanessa" {
   ssh_keys           = ["${var.ssh_key_ID}"]
   image              = "${var.ubuntu}"

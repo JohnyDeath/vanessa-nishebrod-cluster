@@ -6,6 +6,7 @@ if [ "$TIMEZONE" ]; then
 else 
     timezone="Europe/Moscow"
 fi
+
 echo "$timezone" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
 echo "$1"
 echo "$0"
