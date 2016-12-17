@@ -25,9 +25,9 @@
 
 ## Используемые технологии
 
-* `packer` - чтобы сделать готовый образ для Digital Ocean
-* `terraform` - чтобы запускать и обновлять Кластер
-* `docker` - чтобы объединять и связывать сервисы
+* `packer` - чтобы сделать готовый образ (например для Digital Ocean) https://www.packer.io/downloads.html 
+* `terraform` - чтобы запускать и обновлять Кластер https://www.terraform.io/
+* `docker` - чтобы объединять и связывать сервисы https://www.docker.com/
 
 ## Docker контейнеры и docker технологии
 
