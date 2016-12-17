@@ -12,6 +12,8 @@ ENV DESCRIPTORS=/opt/descriptors
 ADD conf /distr/
 RUN chmod -v +x /distr/docker-entrypoint.sh && chmod -v +x /distr/installapache.sh && sleep 1 && /distr/installapache.sh
 
+RUN sh /distr/download.sh
+
 RUN dpkg -i /distr/distr/1c*.deb \
     && rm -rf /distr/distr/*.deb \
     && apt-get clean && apt-get autoclean \

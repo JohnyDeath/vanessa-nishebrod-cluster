@@ -1,5 +1,7 @@
 # Кластер 1С для "нищебродов"
 
+[![Join the chat at https://gitter.im/silverbulleters/vanessa-base-init](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/silverbulleters/vanessa-nishebrod-cluster?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
 * Если у вас нет сервера 1С или денег на сервер 1С.
 * А обеспечить высокую доступность хочется то этот репозиторий для вас
 * Также данный репозиторий является обучающим - дающим понимание по концепции `NoOps` для интересующихся 1С-ников
@@ -40,7 +42,7 @@
 ## Если хотите попробовать
 
 * используйте реферальную ссылку Digital Ocean https://m.do.co/c/2a3a0769ac84 - получите облачный сервер на 10$
-* войдите в чат Giier и задайте вопрос
+* войдите в чат Giier [![Join the chat at https://gitter.im/silverbulleters/vanessa-base-init](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/silverbulleters/vanessa-nishebrod-cluster?utm_source=share-link&utm_medium=link&utm_campaign=share-link) и задайте вопрос
 * если в Gitter чате никто не ответил - читайте документацию до конца и делайте `pull-request'ы`
 
 ## Доработка
