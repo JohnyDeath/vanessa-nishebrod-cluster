@@ -9,20 +9,15 @@ resource "atlas_artifact" "vanessa-apache-cluster-ub16LTSmaster-do" {
 }
 
 resource "digitalocean_droplet" "vanessa" {
-  ssh_keys           = ["${var.ssh_key_ID}"]
+  ssh_keys = [
+      "${var.ssh_fingerprint}"
+    ]
   image = "${atlas_artifact.vanessa-apache-cluster-ub16LTSmaster-do.id}"
-  region             = "${var.region}"
+  region             = "fra1"
   size               = "2gb"
   private_networking = true
   name               = "vanessa${count.index + 1}"
-  count              = "${var.num_instances}"
-
-  connection {
-    type        = "ssh"
-    private_key = "${file("${var.key_path}")}"
-    user        = "root"
-    timeout     = "2m"
-  }
+  count              = "1"
 
   provisioner "file" {
     source      = "${path.module}/vanessa-start.sh"
@@ -36,9 +31,17 @@ resource "digitalocean_droplet" "vanessa" {
 
   provisioner "remote-exec" {
     inline = [
-      "echo ${var.num_instances} > /opt/vanessa-server-count",
+      "echo 1 > /opt/vanessa-server-count",
       "echo ${digitalocean_droplet.vanessa.0.ipv4_address} > /opt/vanessa-server-addr",
       "curl -sSL https://agent.digitalocean.com/install.sh | sh"
     ]
   }
+  
+  connection {
+      user = "root"
+      type = "ssh"
+      key_file = "${var.pvt_key}"
+      timeout = "2m"
+  }
+
 }
