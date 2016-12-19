@@ -29,6 +29,14 @@
   {
     "type": "shell",
     "script": "./images/make-onec.sh"
+  },
+  {
+    "type": "shell",
+    "script": "./images/prepare.sh"
+  },
+  {
+    "type": "shell",
+    "script": "./images/build.sh"
   }
   ],
   "post-processors": [{

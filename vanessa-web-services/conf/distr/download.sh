@@ -5,7 +5,7 @@
 
 set -e
 
-ls -al ./
+#ls -al ./
 
 source ./.env
 
@@ -70,7 +70,7 @@ SERVERINK=$(curl -s -G \
     --data-urlencode "path=Platform\\${VERSION//./_}\\deb.tar.gz" \
     https://releases.1c.ru/version_file | grep -oP '(?<=a href=")[^"]+(?=">Скачать дистрибутив)')    
 
-curl --fail -b /tmp/cookies.txt -o ./client32.tar.gz -L "$CLIENTLINK"
+#curl --fail -b /tmp/cookies.txt -o ./client32.tar.gz -L "$CLIENTLINK"
 curl --fail -b /tmp/cookies.txt -o ./server32.tar.gz -L "$SERVERINK"
 
 rm /tmp/cookies.txt
