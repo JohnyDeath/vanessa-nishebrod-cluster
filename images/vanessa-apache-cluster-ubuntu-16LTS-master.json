@@ -23,7 +23,7 @@
   },
   {
     "type": "file",
-    "source": "./balansers",
+    "source": "./balanser",
     "destination": "/opt/services/balanser"
   },
   {
