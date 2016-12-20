@@ -31,8 +31,7 @@ services:
       - 'vanessa_data:/opt/database'
   webdav:
     image: 'morrisjobke/webdav:latest'
-    hostname:
-      - webdav
+    hostname: "webdav"
     ports:
       - '8888:80'
     volumes:
