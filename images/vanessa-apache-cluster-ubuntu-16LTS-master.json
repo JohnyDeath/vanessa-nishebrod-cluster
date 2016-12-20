@@ -52,7 +52,35 @@
       "metadata": {
          "created_at": "{{timestamp}}"
       }
+    },
+    {
+      "type": "atlas",
+      "token": "{{user `atlas_token`}}",
+      "artifact": "silverbulleters/vanessa-apache-cluster-ub16LTSmaster-openstack",
+      "artifact_type": "openstack.image",
+      "metadata": {
+         "created_at": "{{timestamp}}"
+      }
+    },
+    {
+      "type": "atlas",
+      "token": "{{user `atlas_token`}}",
+      "artifact": "silverbulleters/vanessa-apache-cluster-ub16LTSmaster-virtb",
+      "artifact_type": "virtualbox.image",
+      "metadata": {
+         "created_at": "{{timestamp}}"
+      }
+    },
+    {
+      "type": "atlas",
+      "token": "{{user `atlas_token`}}",
+      "artifact": "silverbulleters/vanessa-apache-cluster-ub16LTSmaster-vagbox",
+      "artifact_type": "vagrant.box",
+      "metadata": {
+         "created_at": "{{timestamp}}"
+      }
     }
+
   ],
 
   "variables": {
