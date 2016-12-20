@@ -11,7 +11,7 @@
 	<router exchangeStore="limited">
 
 		<!-- Proxy für gesamten Host -->
-		<serviceProxy port="80">
+		<serviceProxy name="Balanser" port="80">
             <path>/</path>
             <balancer>
                 <clusters>
@@ -26,6 +26,11 @@
              <roundRobinStrategy/>
              </balancer>
 		</serviceProxy>
+
+        <serviceProxy name="Configurator" port="80">
+			<path>/configurator</path>
+			<target host="webdav" port="8888"/>
+		</serviceProxy
 
 		<!-- Proxy für die Admin Console -->
 		<serviceProxy name="Console" port="9000">

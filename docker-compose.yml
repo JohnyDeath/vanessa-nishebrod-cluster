@@ -1,43 +1,45 @@
 version: '2'
 services:
   balanser:
-    image: 'membrane:latest'
+    image: 'silverbulleters/vanessa-membrane'
     ports:
       - '80:80'
   webadapter-1:
-    image: 'vanessa-apache'
+    image: 'silverbulleters/vanessa-apache'
     hostname:
       - webadapter-1
     volumes:
       - 'vanessa_data:/opt/database'
   webadapter-2:
-    image: 'vanessa-apache'
+    image: 'silverbulleters/vanessa-apache'
     hostname:
       - webadapter-2
     volumes:
       - 'vanessa_data:/opt/database'
   webadapter-3:
-    image: 'vanessa-apache'
+    image: 'silverbulleters/vanessa-apache'
     hostname:
       - webadapter-3
     volumes:
       - 'vanessa_data:/opt/database'
   webadapter-4:
-    image: 'vanessa-apache'
+    image: 'silverbulleters/vanessa-apache'
     hostname:
       - webadapter-4
     volumes:
       - 'vanessa_data:/opt/database'
   webadapter-5:
-    image: 'vanessa-apache'
+    image: 'silverbulleters/vanessa-apache'
     hostname:
       - webadapter-5
     volumes:
       - 'vanessa_data:/opt/database'
   webdav:
-    image: 'webdav:latest'
+    image: 'morrisjobke/webdav:latest'
+    hostname:
+      - webdav
     ports:
-      - '9090:3345'
+      - '8888:80'
     volumes:
       - 'vanessa_data:/opt/database'
 

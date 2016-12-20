@@ -11,3 +11,4 @@ cd /opt/services/balanser
 
 docker build -t silverbulleters/vanessa-membrane .
 
+mkdir - p /opt/vanessa_data
