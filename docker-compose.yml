@@ -9,26 +9,31 @@ services:
     hostname: "webadapter-1"
     volumes:
       - 'vanessa_data:/opt/database'
+    links: balanser
   webadapter-2:
     image: 'silverbulleters/vanessa-apache'
     hostname: "webadapter-2"
     volumes:
       - 'vanessa_data:/opt/database'
+    links: balanser
   webadapter-3:
     image: 'silverbulleters/vanessa-apache'
     hostname: "webadapter-3"
     volumes:
       - 'vanessa_data:/opt/database'
+    links: balanser
   webadapter-4:
     image: 'silverbulleters/vanessa-apache'
     hostname: "webadapter-4"
     volumes:
       - 'vanessa_data:/opt/database'
+    links: balanser
   webadapter-5:
     image: 'silverbulleters/vanessa-apache'
     hostname: "webadapter-5"
     volumes:
       - 'vanessa_data:/opt/database'
+    links: balanser
   webdav:
     image: 'morrisjobke/webdav:latest'
     hostname: "webdav"
@@ -36,7 +41,7 @@ services:
       - '8888:80'
     volumes:
       - 'vanessa_data:/opt/database'
-
+    links: balanser
 volumes:
   vanessa_data:
     driver: local
