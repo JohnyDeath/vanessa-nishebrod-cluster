@@ -30,7 +30,7 @@
         <serviceProxy name="Configurator" port="80">
 			<path>/configurator</path>
 			<target host="webdav" port="8888"/>
-		</serviceProxy
+		</serviceProxy>
 
 		<!-- Proxy für die Admin Console -->
 		<serviceProxy name="Console" port="9000">
