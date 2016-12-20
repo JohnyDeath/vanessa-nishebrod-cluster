@@ -6,32 +6,27 @@ services:
       - '80:80'
   webadapter-1:
     image: 'silverbulleters/vanessa-apache'
-    hostname:
-      - "webadapter-1"
+    hostname: "webadapter-1"
     volumes:
       - 'vanessa_data:/opt/database'
   webadapter-2:
     image: 'silverbulleters/vanessa-apache'
-    hostname:
-      - "webadapter-2"
+    hostname: "webadapter-2"
     volumes:
       - 'vanessa_data:/opt/database'
   webadapter-3:
     image: 'silverbulleters/vanessa-apache'
-    hostname:
-      - "webadapter-3"
+    hostname: "webadapter-3"
     volumes:
       - 'vanessa_data:/opt/database'
   webadapter-4:
     image: 'silverbulleters/vanessa-apache'
-    hostname:
-      - "webadapter-4"
+    hostname: "webadapter-4"
     volumes:
       - 'vanessa_data:/opt/database'
   webadapter-5:
     image: 'silverbulleters/vanessa-apache'
-    hostname:
-      - "webadapter-5"
+    hostname: "webadapter-5"
     volumes:
       - 'vanessa_data:/opt/database'
   webdav:
