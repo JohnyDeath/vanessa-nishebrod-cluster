@@ -1,0 +1,41 @@
+<spring:beans xmlns="http://membrane-soa.org/proxies/1/"
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://membrane-soa.org/proxies/1/ http://membrane-soa.org/schemas/proxies-1.xsd">
+
+	<!-- maxSize bestimmt wieviel Speicher Membrane fuer das Tracing von Nachrichten verwendet -->
+	<limitedMemoryExchangeStore id="limited" maxSize="10000000"/>
+
+	<router exchangeStore="limited">
+
+		<!-- Proxy für gesamten Host -->
+		<serviceProxy port="80">
+            <path>/</path>
+            <balancer>
+                <clusters>
+                    <cluster>
+                        <node host="webadapter-1"/>
+                        <node host="webadapter-2"/>
+                        <node host="webadapter-3"/>
+                        <node host="webadapter-4"/>
+                        <node host="webadapter-5"/>
+                     </cluster>
+                 </clusters>
+             <roundRobinStrategy/>
+             </balancer>
+		</serviceProxy>
+
+		<!-- Proxy für die Admin Console -->
+		<serviceProxy name="Console" port="9000">
+			<basicAuthentication>
+                 <user name="admin" password="strange" />
+            </basicAuthentication>
+            <accessControl file="acl.xml" />
+            <adminConsole />
+		</serviceProxy>
+
+	</router>
+
+</spring:beans>

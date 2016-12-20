@@ -19,12 +19,17 @@
   {
     "type": "file",
     "source": "./vanessa-web-services",
-    "destination": "/tmp/apache"
+    "destination": "/opt/services/apache"
+  },
+  {
+    "type": "file",
+    "source": "./balansers",
+    "destination": "/opt/services/balanser"
   },
   {
     "type": "file",
     "source": "./.env",
-    "destination": "/tmp/apache/.env"
+    "destination": "/opt/services/apache/.env"
   },
   {
     "type": "shell",
